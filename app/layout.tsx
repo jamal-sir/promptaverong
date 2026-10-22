@@ -47,8 +47,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     .map(({ slug, label }) => ({ slug, label }))
 
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${interTight.variable}`}>
-      <body>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${interTight.variable}`}
+    >
+      <body suppressHydrationWarning>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <a
             href="#main-content"
